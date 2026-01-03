@@ -1,0 +1,107 @@
+body {
+    background: #0d0d0d;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* NAVBAR */
+  .custom-nav {
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+  }
+  
+  .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+  }
+  
+  .nav-link:hover {
+    color: #ffc107 !important;
+  }
+  
+  /* HERO */
+  .hero-section {
+    min-height: 100vh;
+    padding-top: 120px;
+  }
+  
+  .hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+  }
+  
+  .hero-title span {
+    color: #ff9800;
+  }
+  
+  .hero-text {
+    color: #b0b0b0;
+    margin: 20px 0;
+  }
+  
+  .hero-btn {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+  }
+  
+  .hero-img {
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(255,152,0,0.6);
+  }
+  
+  /* SECTIONS */
+  .section-dark {
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    color: #ffc107;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* LESSON CARD */
+  .lesson-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .lesson-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .lesson-card h5 {
+    color: #ffc107;
+  }
+  
+  .lesson-card p {
+    color: #aaa;
+  }
+  
+  .lesson-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255,152,0,0.5);
+  }
+  
+  /* CTA */
+  .cta-section {
+    padding: 60px 20px;
+    background: radial-gradient(circle, #ff9800, #0d0d0d);
+    color: #000;
+  }
+  
+   /* Link */
+  .lesson-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+  }
+  
+  .lesson-card{
+    cursor:pointer;
+  }
+  

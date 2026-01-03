@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ukulele Course | BajateyRaho</title>
+
+<link rel="stylesheet" href="../css/ukulele.css">
+
+</head>
+
+<body>
+
+<div class="header">🎶 Ukulele Course</div>
+
+<div class="container">
+
+  <!-- STAGE 1 -->
+  <div class="stage">
+    <div>Stage 1 – Ukulele Basics</div>
+    <a href="lesson.html"><button class="btn start">Start</button></a>
+  </div>
+
+  <!-- STAGE 2 -->
+  <div class="stage locked" id="u-stage2">
+    <div>Stage 2 – Basic Chords</div>
+    <button class="btn">Locked 🔒</button>
+  </div>
+
+  <!-- STAGE 3 (PAID) -->
+  <div class="stage locked" id="u-stage3">
+    <div>Stage 3 – Strumming</div>
+    <button class="btn pay">Unlock 🔥</button>
+  </div>
+
+</div>
+
+<script>
+if(localStorage.getItem("ukulele_stage1")==="completed"){
+  document.getElementById("u-stage2").classList.remove("locked");
+  document.getElementById("u-stage2").innerHTML =
+  `<div>Stage 2 – Basic Chords</div>
+   <a href="lesson.html"><button class="btn start">Start</button></a>`;
+}
+
+if(localStorage.getItem("ukulele_paid")==="yes"){
+  document.getElementById("u-stage3").classList.remove("locked");
+  document.getElementById("u-stage3").innerHTML =
+  `<div>Stage 3 – Strumming</div>
+   <a href="lesson.html"><button class="btn start">Start</button></a>`;
+}
+</script>
+
+</body>
+</html>

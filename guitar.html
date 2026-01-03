@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Guitar Course | BajateyRaho</title>
+
+<link rel="stylesheet" href="../css/guitar.css">
+
+</head>
+
+<body>
+
+<div class="header">🎸 Guitar Course</div>
+
+<div class="container">
+
+  <!-- STAGE 1 -->
+  <div class="stage">
+    <div>Stage 1 – Guitar Basics</div>
+    <a href="lesson.html"><button class="btn start">Start</button></a>
+  </div>
+
+  <!-- STAGE 2 -->
+  <div class="stage locked" id="g-stage2">
+    <div>Stage 2 – Chords</div>
+    <button class="btn">Locked 🔒</button>
+  </div>
+
+  <!-- STAGE 3 (PAID) -->
+  <div class="stage locked" id="g-stage3">
+    <div>Stage 3 – Strumming</div>
+    <button class="btn pay">Unlock 🔥</button>
+  </div>
+
+</div>
+
+<script>
+// Unlock stage 2 after stage 1
+if(localStorage.getItem("guitar_stage1")==="completed"){
+  document.getElementById("g-stage2").classList.remove("locked");
+  document.getElementById("g-stage2").innerHTML =
+  `<div>Stage 2 – Chords</div>
+   <a href="lesson.html"><button class="btn start">Start</button></a>`;
+}
+
+// Paid unlock
+if(localStorage.getItem("guitar_paid")==="yes"){
+  document.getElementById("g-stage3").classList.remove("locked");
+  document.getElementById("g-stage3").innerHTML =
+  `<div>Stage 3 – Strumming</div>
+   <a href="lesson.html"><button class="btn start">Start</button></a>`;
+}
+</script>
+
+</body>
+</html>

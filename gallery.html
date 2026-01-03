@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BajateyRaho | Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🎸 BajateyRaho</div>
+    <div class="menu-btn">☰</div>
+  </header>
+
+  <!-- SIDE MENU -->
+<div id="sideMenu">
+  <span id="closeMenu">×</span>
+  <a href="index.html">Home</a>
+  <a href="video.html">Videos</a>
+  <a href="lesson.html">Lessons</a>
+  <a href="#">Gallery</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"></div>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Live Moments 🎵</h1>
+    <p>Stage lights, strings & pure vibes</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section">
+
+    <h2>On Stage</h2>
+    <div class="gallery-grid">
+      <div class="card"><img src="meee.JPG"></div>
+      <div class="card"><img src="meee.JPG"></div>
+      <div class="card"><img src="meee.JPG"></div>
+    </div>
+
+    <h2>Practice & Lessons</h2>
+    <div class="gallery-grid">
+      <div class="card"><img src="meee.JPG"></div>
+      <div class="card"><img src="meee.JPG"></div>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Feel the Music. Live the Moment.</h2>
+    <button>Join the Jam</button>
+  </section>
+
+  <script>
+    const menuBtn = document.querySelector(".menu-btn");
+    const sideMenu = document.getElementById("sideMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const overlay = document.getElementById("menuOverlay");
+  
+    menuBtn.addEventListener("click", () => {
+      sideMenu.classList.add("open");
+      overlay.classList.add("show");
+    });
+  
+    closeMenu.addEventListener("click", () => {
+      sideMenu.classList.remove("open");
+      overlay.classList.remove("show");
+    });
+  
+    overlay.addEventListener("click", () => {
+      sideMenu.classList.remove("open");
+      overlay.classList.remove("show");
+    });
+  </script>
+  
+
+</body>
+</html>

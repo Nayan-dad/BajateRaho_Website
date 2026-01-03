@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact | BajateyRaho</title>
+
+<link rel="stylesheet" href="contact.css">
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+<div class="header">🎸 BajateyRaho</div>
+
+<section class="hero">
+  <h1>Contact Me</h1>
+  <p>Questions? Collaborations? Guitar ya Ukulele doubts?</p>
+</section>
+
+<section class="contact-container">
+
+  <!-- LEFT -->
+  <div class="contact-info">
+    <h2>Let’s Connect 🎶</h2>
+    <p>
+      Guitar / Ukulele seekhna ho  
+      ya course related doubt ho — ping me.
+    </p>
+
+    <div>📧 Email: <b>nayan38143398@gmail.com</b></div>
+    <div>📸 Instagram: <b>@nayansview</b></div>
+    <div>📍 India</div>
+  </div>
+
+  <!-- RIGHT -->
+  <form id="form">
+    <div class="field">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name">
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email">
+    </div>
+    <div class="field">
+      <label for="message">Comments</label>
+      <textarea 
+      name="message"
+      placeholder="Write your message here..."
+      rows="6"
+      required
+      id="message">
+      </textarea>
+    </div>
+  
+    <input type="submit" id="button" value="Send Email" >
+  </form>
+  
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('-ZI3sXDMPzUWYjsdy')
+ 
+  
+  
+  const btn = document.getElementById('button');
+
+  document.getElementById('form')
+   .addEventListener('submit', function(event) {
+     event.preventDefault();
+  
+     btn.value = 'Sending...';
+  
+     const serviceID = 'default_service';
+     const templateID = 'template_57q29ig';
+  
+     emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = 'Send Email';
+        alert('Sent!');
+      }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
+  });
+</script>
+
+</body>
+</html>
